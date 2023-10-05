@@ -10,7 +10,7 @@ export default {
     },
     {
       name: 'releaseDate',
-      type: 'datetime',
+      type: 'date',
       title: 'Release Date'
     },
     {
