@@ -1,9 +1,39 @@
+import React from "react";
+
+import bandImage from "../images/detweiler_home.jpeg"
+
 function Home() {
-  return (
-    <div className="container mx-auto">
-      <h1 className="text-4xl font-bold text-center">Home</h1>
-    </div>
-  );
-}
+	return (
+		<section className="container w-full lg:px-0 px-5 lg:w-3/4 mx-auto min-h-screen">
+			<div className="mt-16">
+				<h3 className="text-3xl font-bold text-center my-10 lg:my-5">
+					Detweiler
+				</h3>
+				<div className="flex gap-10 justify-center items-center flex-col lg:flex-row mt-10">
+					<div className="">
+						<img
+							src={bandImage}
+							className="w-96 rounded-xl lg:rounded-l-xl"
+							alt=""
+						/>
+					</div>
+					<div className="w-full lg:w-1/3 flex gap-5 mb-10 lg:mb-0 flex-col">
+						⭐⭐⭐
+						<p>
+							Northern ravey rockers
+						</p>
+						<p>
+							David Holt
+						</p>
+						<p>
+							Marianne Holt
+						</p>
+						⭐⭐⭐
+					</div>
+				</div>
+			</div>
+		</section>
+	);
+};
 
 export default Home;

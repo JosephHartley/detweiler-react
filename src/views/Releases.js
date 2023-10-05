@@ -8,7 +8,13 @@ function urlFor(source) {
 	return builder.image(source);
 }
 
-const Releases = () => {
+function Releases() {
+  let formatDate = (date) => {
+    return date.toLocaleString('en-UK', {
+      dateStyle: 'long'
+    })
+  }
+
 	const [releases, setReleases] = useState(null);
 
 	useEffect(() => {
@@ -49,13 +55,19 @@ const Releases = () => {
 									<img
 										src={urlFor(release.image).width(200).url()}
 										alt={release.title}
-										className="rounded-full object-cover w-40 h-40 border-4 shadow-inner std-border"
+										className="rounded-l object-cover w-40 h-40 border-4 shadow-inner std-border"
 									/>
 									<h4 className="text-2xl pt-3 font-bold capitalize">
 										{release.title}
 									</h4>
 								</div>
-								<p className="mt-5">{release.description}</p>
+                <p className="text-center mt-3">
+                  {formatDate(new Date(release.releaseDate))}
+                </p>
+                <p className="text-center mt-3">
+                <a href={release.link}>Listen</a> | <a href={release.link}>Buy</a> | <a href={release.link}>Stream</a>
+                </p>
+								<p className="text-sm mt-5">{release.description}</p>
 							</div>
 						))}
 				</div>
