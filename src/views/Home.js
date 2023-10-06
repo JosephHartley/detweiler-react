@@ -10,13 +10,16 @@ function Home() {
 					Detweiler
 				</h3>
 				<div className="flex gap-10 justify-center items-center flex-col lg:flex-row mt-10">
-					<div className="">
-						<img
-							src={bandImage}
-							className="w-96 rounded-xl lg:rounded-l-xl"
-							alt=""
-						/>
-					</div>
+        <div className="relative w-96 h-96">
+  <img
+    src={bandImage}
+    className="w-full h-full object-cover rounded-xl lg:rounded-l-xl"
+    alt=""
+  />
+  <div className="absolute inset-0 rounded-xl lg:rounded-l-xl animate-pulse"></div>
+  <div className="absolute inset-0 bg-green-500 opacity-50 rounded-xl lg:rounded-l-xl animate-pulse-color"></div>
+</div>
+
 					<div className="w-full lg:w-1/3 flex gap-5 mb-10 lg:mb-0 flex-col">
 						⭐⭐⭐
 						<p>

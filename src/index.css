@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes pulseColor {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-color {
+  animation: pulseColor 3s infinite;
+}
