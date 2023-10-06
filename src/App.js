@@ -17,12 +17,14 @@ function App() {
       <div className="max-w-full">
         <Header />
       </div>
-			<Routes>
-				<Route path="/" element={<Home />} />
-        <Route path="/gigs" element={<Gigs />} />
-        <Route path="/posts" element={<Posts />} />
-        <Route path="/releases" element={<Releases />} />
-			</Routes>
+      <div className="background">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/gigs" element={<Gigs />} />
+          <Route path="/posts" element={<Posts />} />
+          <Route path="/releases" element={<Releases />} />
+        </Routes>
+      </div>
       <div className="max-w-full">
 				<Footer />
 			</div>
