@@ -47,7 +47,7 @@ function Releases() {
         {releases &&
           releases.map((release) => (
             <div
-              className="bg-gray-700/100 rounded shadow-lg shadow-red-300/50 p-5 std-border"
+              className="rounded shadow-lg shadow-red-300/50 p-5 std-border"
               key={release.title}
             >
               <div className="flex flex-col items-center">

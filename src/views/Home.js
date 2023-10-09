@@ -1,6 +1,6 @@
 import React from "react";
-
-import bandImage from "../images/detweiler_home.jpeg"
+import { FaInstagram, FaTwitter, FaYoutube, FaBandcamp, FaSpotify, FaItunesNote, FaEnvelope } from "react-icons/fa";
+import bandImage from "../images/detweiler_home.jpeg";
 
 function Home() {
 	return (
@@ -25,6 +25,15 @@ function Home() {
           <p>Marianne Holt</p>
           ⭐⭐⭐
         </div>
+      </div>
+      <div className="flex space-x-4 text-3xl text-white justify-center items-center p-5">
+        <a href="https://detweiler.bandcamp.com/"><FaBandcamp /></a>
+        <a href="https://open.spotify.com/artist/2B1Qb8o1l8W0YX6m0ZJG6j"><FaSpotify /></a>
+        <a href="https://music.apple.com/us/artist/detweiler/1550731618"><FaItunesNote /></a>
+        <a href="https://www.instagram.com/detweilerband/"><FaInstagram /></a>
+        <a href="https://twitter.com/detweilerband"><FaTwitter /></a>
+        <a href="https://www.youtube.com/channel/UCJQ5B1Y6qY0xw5x7J4qW0GQ"><FaYoutube /></a>
+        <a href="mailto:band@detweiler.co.uk"><FaEnvelope /></a>
       </div>
     </section>
 	);
