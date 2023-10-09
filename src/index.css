@@ -1,25 +1,42 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+
+@font-face {
+  font-family: "Presicav";
+  src: local("Presicav"),
+    url("./fonts/Presicav.otf") format("opentype");
+}
+
+h1, h2, li {
+  font-family: "Presicav";
+  color: white
+;}
+
+p {
+  font-family: "Open Sans";
+  color: white;
+}
 
 @keyframes pulseColor {
   0%, 100% {
     opacity: 1;
   }
   50% {
-    opacity: 1;
+    opacity: 0.5;
   }
 }
 
 .animate-pulse-color {
-  animation: pulseColor 7s infinite;
+  animation: pulseColor 1s infinite;
 }
+
 
 .background {
   min-height: 100vh;
   --s: 300px; /* control the size */
   --c: #555C6D; /* first color */
-
   --_g: #0000 52%, var(--c) 54% 57%, #0000 59%;
   background:
     radial-gradient(farthest-side at -33.33% 50%, var(--_g)) 0 calc(var(--s)/2),
@@ -29,3 +46,17 @@
     #E09EA4; /* second color */
   background-size: calc(var(--s)/4.667) var(--s), var(--s) calc(var(--s)/4.667);
 }
+
+/* .background:hover {
+  min-height: 100vh;
+  --s: 300px;
+  --c: #E09EA4;
+  --_g: #0000 52%, var(--c) 54% 57%, #0000 59%;
+  background:
+    radial-gradient(farthest-side at -33.33% 50%, var(--_g)) 0 calc(var(--s)/2),
+    radial-gradient(farthest-side at 50% 133.33%, var(--_g)) calc(var(--s)/2) 0,
+    radial-gradient(farthest-side at 133.33% 50%, var(--_g)),
+    radial-gradient(farthest-side at 50% -33.33%, var(--_g)),
+    #555C6D;
+  background-size: calc(var(--s)/4.667) var(--s), var(--s) calc(var(--s)/4.667);
+} */

@@ -40,38 +40,36 @@ function Releases() {
 
 	return (
 		<section className="container w-full lg:px-0 px-5 lg:w-3/4 mx-auto min-h-screen">
-			<div className="my-10">
-				<h3 className="text-3xl font-bold text-center my-10 lg:my-5">
-					Releases
-				</h3>
-				<div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-					{releases &&
-						releases.map((release) => (
-							<div
-								className="bg-gray-100 rounded shadow-xl p-5 std-border"
-								key={release.title}
-							>
-								<div className="flex flex-col items-center">
-									<img
-										src={urlFor(release.image).width(200).url()}
-										alt={release.title}
-										className="rounded-l object-cover w-40 h-40 border-4 shadow-inner std-border"
-									/>
-									<h4 className="text-2xl pt-3 font-bold capitalize">
-										{release.title}
-									</h4>
-								</div>
-                <p className="text-center mt-3">
-                  {formatDate(new Date(release.releaseDate))}
-                </p>
-                <p className="text-center mt-3">
-                <a href={release.link}>Listen</a> | <a href={release.link}>Buy</a> | <a href={release.link}>Stream</a>
-                </p>
-								<p className="text-sm mt-5">{release.description}</p>
-							</div>
-						))}
-				</div>
-			</div>
+      <h1 className="text-3xl font-bold text-center p-5">
+        Releases
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-5">
+        {releases &&
+          releases.map((release) => (
+            <div
+              className="bg-gray-700/100 rounded shadow-lg shadow-red-300/50 p-5 std-border"
+              key={release.title}
+            >
+              <div className="flex flex-col items-center">
+                <img
+                  src={urlFor(release.image).width(200).url()}
+                  alt={release.title}
+                  className="rounded-l object-cover w-40 h-40 border-4 shadow-inner std-border"
+                />
+                <h2 className="text-2xl pt-3 font-bold capitalize">
+                  {release.title}
+                </h2>
+              </div>
+              <p className="text-center mt-3">
+                {formatDate(new Date(release.releaseDate))}
+              </p>
+              <p className="text-center mt-3">
+              <a href={release.link}>Buy</a> | <a href={release.link}>Stream</a>
+              </p>
+              <p className="text-sm mt-5">{release.description}</p>
+            </div>
+          ))}
+      </div>
 		</section>
 	);
 };

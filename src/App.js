@@ -14,20 +14,20 @@ import Footer from "./components/Footer";
 function App() {
 	return (
 		<BrowserRouter>
-      <div className="max-w-full">
-        <Header />
-      </div>
       <div className="background">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/gigs" element={<Gigs />} />
-          <Route path="/posts" element={<Posts />} />
-          <Route path="/releases" element={<Releases />} />
-        </Routes>
+        <div className="max-w-full backdrop-opacity-20 backdrop-invert bg-green-500/10 shadow-lg">
+          <Header />
+        </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/gigs" element={<Gigs />} />
+            <Route path="/posts" element={<Posts />} />
+            <Route path="/releases" element={<Releases />} />
+          </Routes>
+        <div className="max-w-full">
+          <Footer />
+        </div>
       </div>
-      <div className="max-w-full">
-				<Footer />
-			</div>
 		</BrowserRouter>
 	);
 }
