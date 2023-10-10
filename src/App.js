@@ -15,7 +15,7 @@ function App() {
 	return (
 		<BrowserRouter>
       <div className="background">
-        <div className="max-w-full backdrop-opacity-20 backdrop-invert bg-green-500/10 shadow-lg">
+        <div className="sticky top-0 max-w-full backdrop-opacity-20 backdrop-invert bg-green-500/10 shadow-lg">
           <Header />
         </div>
           <Routes>

@@ -45,6 +45,7 @@ p {
     radial-gradient(farthest-side at 50% -33.33%, var(--_g)),
     #E09EA4; /* second color */
   background-size: calc(var(--s)/4.667) var(--s), var(--s) calc(var(--s)/4.667);
+  background-attachment: fixed;
 }
 
 /* .background:hover {

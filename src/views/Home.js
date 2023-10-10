@@ -9,7 +9,7 @@ function Home() {
         Detweiler
       </h1>
       <div className="flex gap-10 justify-center items-center flex-col lg:flex-row mt-10">
-        <div className="relative w-96 h-96">
+        <div className="w-96 h-96">
           <img
             src={bandImage}
             className="w-full h-full object-cover rounded-xl lg:rounded-l-xl"
