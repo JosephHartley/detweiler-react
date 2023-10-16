@@ -5,22 +5,17 @@ import imageUrlBuilder from "@sanity/image-url";
 const builder = imageUrlBuilder(sanityClient);
 
 function urlFor(source) {
-	return builder.image(source);
+  return builder.image(source);
 }
 
 function Releases() {
-  let formatDate = (date) => {
-    return date.toLocaleString('en-UK', {
-      dateStyle: 'long'
-    })
-  }
+  const [releases, setReleases] = useState(null);
+  const [expandedRelease, setExpandedRelease] = useState(null);
 
-	const [releases, setReleases] = useState(null);
-
-	useEffect(() => {
-		sanityClient
-			.fetch(
-				`*[_type == "release"]{
+  useEffect(() => {
+    sanityClient
+      .fetch(
+        `*[_type == "release"]{
 					_id,
       title,
       releaseDate,
@@ -33,21 +28,29 @@ function Releases() {
         },
       },
     }`
-			)
-			.then((data) => setReleases(data))
-			.catch(console.error);
-	}, []);
+      )
+      .then((data) => setReleases(data))
+      .catch(console.error);
+  }, []);
 
-	return (
-		<section className="container w-full lg:px-0 px-5 lg:w-3/4 mx-auto min-h-screen">
-      <h1 className="text-3xl font-bold text-center p-5">
-        Releases
-      </h1>
+  const formatDate = (date) => {
+    return date.toLocaleString("en-UK", {
+      dateStyle: "long",
+    });
+  };
+
+  const handleInfoClick = (releaseId) => {
+    setExpandedRelease((prev) => (prev === releaseId ? null : releaseId));
+  };
+
+  return (
+    <section className="container w-full lg:px-0 px-5 lg:w-3/4 mx-auto min-h-screen">
+      <h1 className="text-3xl font-bold text-center p-5">Releases</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-5">
         {releases &&
           releases.map((release) => (
             <div
-              className="rounded shadow-lg shadow-red-300/50 p-5 std-border"
+              className=""
               key={release.title}
             >
               <div className="flex flex-col items-center">
@@ -61,17 +64,25 @@ function Releases() {
                 </h2>
               </div>
               <p className="text-center mt-3">
-                {formatDate(new Date(release.releaseDate))}
+                <a href={release.link}>Buy</a> |{" "}
+                <a href={release.link}>Stream</a> |{" "}
+                <button onClick={() => handleInfoClick(release._id)}>
+                  Info
+                </button>
               </p>
-              <p className="text-center mt-3">
-              <a href={release.link}>Buy</a> | <a href={release.link}>Stream</a>
-              </p>
-              <p className="text-sm mt-5">{release.description}</p>
+              {expandedRelease === release._id && (
+                <p
+                  className="text-sm mt-5 rounded backdrop-opacity-20 backdrop-invert bg-green-500/10 shadow-lg p-5 std-border">
+                  <b>{formatDate(new Date(release.releaseDate))}</b>
+                  <br />
+                  {release.description}
+                </p>
+              )}
             </div>
           ))}
       </div>
-		</section>
-	);
-};
+    </section>
+  );
+}
 
 export default Releases;
