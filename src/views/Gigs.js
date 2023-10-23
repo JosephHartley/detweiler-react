@@ -23,7 +23,7 @@ function Gigs() {
 
   const formatDate = (date) => {
     return date.toLocaleString("en-UK", {
-      dateStyle: "medium",
+      month: 'short', day: 'numeric',
     });
   }
 
@@ -53,14 +53,14 @@ function Gigs() {
               </div>
             </div>
             <div className="basis-3/12 flex flex-wrap justify-end">
-              <div>
+              <div className="mb-2">
                 <button className="text-detweilerGreen border border-detweilerGreen font-bold py-2 px-4 rounded w-24">
                   <a href={gig.venueLink} target="_blank" rel="noopener noreferrer">
                     Venue
                   </a>
                 </button>
               </div>
-              <div>
+              <div className="ml-2">
                 <button className="bg-detweilerGreen border border-detweilerGreen text-white font-bold py-2 px-4 rounded w-24">
                   <a href={gig.ticketLink} target="_blank" rel="noopener noreferrer">
                     Tickets
