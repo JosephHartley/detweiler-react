@@ -21,7 +21,12 @@ export default {
     {
       name: 'link',
       type: 'url',
-      title: 'Link'
+      title: 'Buy Link'
+    },
+    {
+      name: 'stream',
+      type: 'url',
+      title: 'Stream Link'
     },
     {
       name: 'image',

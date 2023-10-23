@@ -15,12 +15,13 @@ function Releases() {
   useEffect(() => {
     sanityClient
       .fetch(
-        `*[_type == "release"]{
+        `*[_type == "release"] | order(releaseDate desc){
 					_id,
       title,
       releaseDate,
       description,
       link,
+      stream,
       image{
         asset->{
           _id,
@@ -65,7 +66,7 @@ function Releases() {
               </div>
               <p className="text-center mt-3">
                 <a href={release.link}>Buy</a> |{" "}
-                <a href={release.link}>Stream</a> |{" "}
+                <a href={release.stream}>Stream</a> |{" "}
                 <button onClick={() => handleInfoClick(release._id)}>
                   Info
                 </button>
@@ -73,7 +74,7 @@ function Releases() {
               {expandedRelease === release._id && (
                 <p
                   className="text-sm mt-5 rounded backdrop-opacity-20 backdrop-invert bg-green-500/10 shadow-lg p-5 std-border">
-                  <b>{formatDate(new Date(release.releaseDate))}</b>
+                  <b>Released {formatDate(new Date(release.releaseDate))}</b>
                   <br />
                   {release.description}
                 </p>

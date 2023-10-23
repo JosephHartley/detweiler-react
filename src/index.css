@@ -9,14 +9,23 @@
     url("./fonts/Presicav.otf") format("opentype");
 }
 
-h1, h2, li {
+h1, h2, h3, li {
   font-family: "Presicav";
-  color: white
-;}
+  color: white;
+}
 
 p {
   font-family: "Open Sans";
   color: white;
+}
+
+#menu a.active {
+  color: #555C6D;
+}
+
+.nav-link:hover {
+  transition: all .5s ease-in-out;
+  color: #555C6D;
 }
 
 @keyframes pulseColor {

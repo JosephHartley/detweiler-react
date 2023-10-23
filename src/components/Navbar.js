@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
 	return (
-		<nav className="container lg:px-0 px-5 py-2 lg:py-0 lg:w-3/4 w-full mx-auto flex flex-col lg:flex-row justify-between h-20 items-center font-bold">
+		<nav id="menu" className="container lg:px-0 px-5 py-2 lg:py-0 lg:w-3/4 w-full mx-auto flex flex-col lg:flex-row justify-between h-20 items-center font-bold">
 			<NavLink to="/">
 				<h2 className="text-xl lg:text-2xl">Detweiler</h2>
 			</NavLink>
@@ -12,9 +12,8 @@ const Navbar = () => {
 					<li>
 						<NavLink
 							to="/"
-							exact
+							exact="true"
 							className="nav-link"
-							activeClassName="active-link"
 						>
 							Home
 						</NavLink>
@@ -23,7 +22,6 @@ const Navbar = () => {
 						<NavLink
 							to="/gigs"
 							className="nav-link"
-							activeClassName="active-link"
 						>
 							Gigs
 						</NavLink>
@@ -32,7 +30,6 @@ const Navbar = () => {
 						<NavLink
 							to="/releases"
 							className="nav-link"
-							activeClassName="active-link"
 						>
 							Releases
 						</NavLink>
@@ -41,7 +38,6 @@ const Navbar = () => {
 						<NavLink
 							to="/posts"
 							className="nav-link"
-							activeClassName="active-link"
 						>
 							Posts
 						</NavLink>
