@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./views/Home";
 import Gigs from "./views/Gigs";
-import Posts from "./views/Posts";
+import News from "./views/News";
 import Releases from "./views/Releases";
 
 import Header from "./components/Header";
@@ -19,7 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/gigs" element={<Gigs />} />
-            <Route path="/posts" element={<Posts />} />
+            <Route path="/news" element={<News />} />
             <Route path="/releases" element={<Releases />} />
           </Routes>
         <div className="max-w-full">

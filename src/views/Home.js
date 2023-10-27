@@ -40,7 +40,7 @@ function Home() {
       <div className="mainDiv">
         <h1 className="text-payeYellow relative">Detweiler</h1>
         <div className="ground relative">
-          <div class="ground-shadow"></div>
+          <div className="ground-shadow"></div>
         </div>
         <div className='announcement'>
           <h2 className="text-payeYellow">PAYE out now</h2>
