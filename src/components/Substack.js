@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 const Substack = () => {
   window.SubstackFeedWidget = {
     substackUrl: "detweilertest.substack.com",
-    posts: 2,
+    posts: 5,
     hidden: ["author"],
     colors: {
       primary: "#E5B446",
@@ -27,14 +27,16 @@ const Substack = () => {
   };
 
   return (
-    <>
+    <div className="flex flex-col justify-start">
       <div id="substack-feed-embed"></div>
-      <div id="custom-substack-embed"></div>
+      <div className="mx-auto">
+        <div id="custom-substack-embed"></div>
+      </div>
       <Helmet>
         <script src="https://substackapi.com/embeds/feed.js" async></script>
         <script src="https://substackapi.com/widget.js" async></script>
       </Helmet>
-    </>
+    </div>
   );
 };
 

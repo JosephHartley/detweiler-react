@@ -8,7 +8,7 @@ const Navbar = () => {
 				<h2 className="text-xl lg:text-2xl">Detweiler</h2>
 			</NavLink>
 			<div className="lg:block">
-				<ul className="flex gap-x-10">
+				<ul className="flex gap-x-5 lg:gap-x-10">
 					<li>
 						<NavLink
 							to="/"

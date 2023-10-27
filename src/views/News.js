@@ -7,7 +7,9 @@ function News() {
       <h1 className="text-3xl font-bold text-center p-5">
         News
       </h1>
-      <Substack />
+      <div className="p-5 border-8 border-payeRed rounded-xl">
+        <Substack />
+      </div>
     </section>
   );
 }
