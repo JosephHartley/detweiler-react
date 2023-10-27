@@ -131,6 +131,6 @@ p {
   width: 100%;
   height: 140px;
   border-radius: 50%;
-  background: radial-gradient(ellipse at 50%, #800000, rgba(0, 0, 0, 0)), url('./images/shadow_noise.svg');
+  background: radial-gradient(ellipse at 50%, #800000, #8D8CBD), url('./images/shadow_noise.svg');
   filter: contrast(150%) brightness(700%);
 }
