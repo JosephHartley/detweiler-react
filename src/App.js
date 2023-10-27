@@ -1,21 +1,19 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-// views
 import Home from "./views/Home";
 import Gigs from "./views/Gigs";
 import Posts from "./views/Posts";
 import Releases from "./views/Releases";
 
-// components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 function App() {
 	return (
 		<BrowserRouter>
-      <div className="background">
-        <div className="sticky top-0 max-w-full backdrop-opacity-20 backdrop-invert bg-green-500/10 shadow-lg">
+      <div className="noise">
+        <div className="sticky top-0 max-w-full backdrop-opacity-10 backdrop-invert bg-blue-300/10 shadow-lg">
           <Header />
         </div>
           <Routes>

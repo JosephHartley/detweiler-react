@@ -6,9 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'blueGray': '#555C6D',
-        'detweilerPink': '#E09EA4',
-        'detweilerGreen': '#a4e09e',
+        'payeOrange': '#D6632C',
+        'payeRed': '#D7585F',
+        'payeYellow': '#E5B446',
+        'payeBlue': '#A2C9D7',
+        'payePurple': '#8D8CBD',
       },
     },
   },
