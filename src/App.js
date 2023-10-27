@@ -13,7 +13,7 @@ function App() {
 	return (
 		<BrowserRouter>
       <div className="noise">
-        <div className="sticky top-0 max-w-full backdrop-opacity-10 backdrop-invert bg-blue-300/10 shadow-lg">
+        <div className="sticky top-0 max-w-full backdrop-opacity-10 backdrop-invert bg-blue-300/10 shadow-lg z-10">
           <Header />
         </div>
           <Routes>
