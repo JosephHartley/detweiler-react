@@ -5,19 +5,10 @@ const Navbar = () => {
 	return (
 		<nav id="menu" className="container lg:px-0 px-5 py-2 lg:py-0 lg:w-3/4 w-full mx-auto flex flex-col lg:flex-row justify-between h-20 items-center font-bold">
 			<NavLink to="/">
-				<h2 className="text-xl lg:text-2xl">Detweiler</h2>
+				<h2 className="nav-link text-xl lg:text-2xl">Detweiler</h2>
 			</NavLink>
 			<div className="lg:block">
-				<ul className="flex gap-x-5 lg:gap-x-10">
-					<li>
-						<NavLink
-							to="/"
-							exact="true"
-							className="nav-link"
-						>
-							Home
-						</NavLink>
-					</li>
+				<ul className="flex gap-x-10">
 					<li>
 						<NavLink
 							to="/gigs"
