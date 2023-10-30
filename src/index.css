@@ -121,7 +121,7 @@ p {
 }
 
 .ground {
-  width: 500px;
+  width: 100%;
   bottom: 100px;
   mix-blend-mode: multiply;
 }

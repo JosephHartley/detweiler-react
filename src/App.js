@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 import Home from "./views/Home";
 import Gigs from "./views/Gigs";
@@ -11,7 +12,6 @@ import Footer from "./components/Footer";
 
 function App() {
 	return (
-		<BrowserRouter>
       <div className="noise">
         <div className="sticky top-0 max-w-full backdrop-opacity-10 backdrop-invert bg-blue-300/10 shadow-lg z-10">
           <Header />
@@ -25,8 +25,8 @@ function App() {
         <div className="max-w-full">
           <Footer />
         </div>
+        <ScrollToTop />
       </div>
-		</BrowserRouter>
 	);
 }
 

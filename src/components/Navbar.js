@@ -4,9 +4,13 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
 	return (
 		<nav id="menu" className="container lg:px-0 px-5 py-2 lg:py-0 lg:w-3/4 w-full mx-auto flex flex-col lg:flex-row justify-between h-20 items-center font-bold">
-			<h2 className="text-xl lg:text-2xl"><NavLink to="/" className="nav-link">
-				Detweiler
-			</NavLink>
+			<h2 className="text-xl lg:text-2xl">
+        <NavLink
+          to="/"
+          className="nav-link"
+        >
+          Detweiler
+        </NavLink>
       </h2>
 			<div className="lg:block">
 				<ul className="flex gap-x-10">

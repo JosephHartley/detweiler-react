@@ -1,10 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React, { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 import App from './App';
+import { BrowserRouter } from "react-router-dom";
 import './index.css';
 import './fonts/Presicav.otf';
 
-const el = document.getElementById('root');
-const root = ReactDOM.createRoot(el);
-
-root.render(<App />);
+const root = createRoot(document.getElementById("root"));
+root.render(
+  <StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </StrictMode>
+);

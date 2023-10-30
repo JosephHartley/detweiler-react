@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 const Substack = () => {
   window.SubstackFeedWidget = {
@@ -27,16 +27,18 @@ const Substack = () => {
   };
 
   return (
-    <div className="flex flex-col justify-start">
-      <div id="substack-feed-embed"></div>
-      <div className="mx-auto">
-        <div id="custom-substack-embed"></div>
+    <HelmetProvider>
+      <div className="flex flex-col justify-start">
+        <div id="substack-feed-embed"></div>
+        <div className="mx-auto">
+          <div id="custom-substack-embed"></div>
+        </div>
+        <Helmet>
+          <script src="https://substackapi.com/embeds/feed.js" async></script>
+          <script src="https://substackapi.com/widget.js" async></script>
+        </Helmet>
       </div>
-      <Helmet>
-        <script src="https://substackapi.com/embeds/feed.js" async></script>
-        <script src="https://substackapi.com/widget.js" async></script>
-      </Helmet>
-    </div>
+    </HelmetProvider>
   );
 };
 
