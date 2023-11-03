@@ -66,11 +66,10 @@ function Releases() {
                     alt={release.title}
                     className="rounded-l object-cover w-40 h-40 border-4 shadow-inner std-border"
                   />
-                  <h2 className="text-2xl pt-3 text-payeYellow">
+                  <h2 className="text-center text-2xl pt-3 text-payeYellow">
                     {release.title}
                   </h2>
-                </div>
-                <p className="text-center text-payeBlue mt-3">
+                <p className="text-payeBlue mt-3">
                   <a href={release.link}>Buy</a> |{" "}
                   <a href={release.stream}>Stream</a> |{" "}
                   <button onClick={() => handleInfoClick(release._id)}>
@@ -79,12 +78,13 @@ function Releases() {
                 </p>
                 {expandedRelease === release._id && (
                   <p
-                    className="text-sm mt-5 rounded backdrop-opacity-10 backdrop-invert bg-blue-300/10 shadow-lg p-5 std-border">
+                  className="text-sm mt-5 rounded backdrop-opacity-10 backdrop-invert bg-blue-300/10 shadow-lg p-5 std-border">
                     <b>Released {formatDate(new Date(release.releaseDate))}</b>
                     <br />
                     {release.description}
                   </p>
                 )}
+                </div>
               </div>
             ))}
         </div>
