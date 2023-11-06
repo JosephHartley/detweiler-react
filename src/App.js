@@ -24,7 +24,7 @@ function App() {
             <Route path="/news" element={<News />} />
             <Route path="/releases" element={<Releases />} />
           </Routes>
-        <div className="max-w-full">
+        <div className="md:sticky bottom-0 max-w-full backdrop-opacity-10 backdrop-invert bg-blue-300/10 shadow-lg z-10">
           <Footer />
         </div>
         <ScrollToTop />

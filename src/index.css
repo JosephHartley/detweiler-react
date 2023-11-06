@@ -23,54 +23,10 @@ p {
   color: #E5B446;
 }
 
-.nav-link:hover, .socials:hover {
+.nav-link:hover, .socials:hover, .release-link:hover {
   transition: all .5s ease-in-out;
   color: #E5B446;
 }
-
-/* .background {
-  min-height: 100vh;
-  --s: 300px;
-  --c: #555C6D;
-  --_g: #0000 52%, var(--c) 54% 57%, #0000 59%;
-  background:
-    radial-gradient(farthest-side at -33.33% 50%, var(--_g)) 0 calc(var(--s)/2),
-    radial-gradient(farthest-side at 50% 133.33%, var(--_g)) calc(var(--s)/2) 0,
-    radial-gradient(farthest-side at 133.33% 50%, var(--_g)),
-    radial-gradient(farthest-side at 50% -33.33%, var(--_g)),
-    #E09EA4;
-  background-size: calc(var(--s)/4.667) var(--s), var(--s) calc(var(--s)/4.667);
-  background-attachment: fixed;
-} */
-
-/* .background:hover {
-  min-height: 100vh;
-  --s: 300px;
-  --c: #E09EA4;
-  --_g: #0000 52%, var(--c) 54% 57%, #0000 59%;
-  background:
-    radial-gradient(farthest-side at -33.33% 50%, var(--_g)) 0 calc(var(--s)/2),
-    radial-gradient(farthest-side at 50% 133.33%, var(--_g)) calc(var(--s)/2) 0,
-    radial-gradient(farthest-side at 133.33% 50%, var(--_g)),
-    radial-gradient(farthest-side at 50% -33.33%, var(--_g)),
-    #555C6D;
-  background-size: calc(var(--s)/4.667) var(--s), var(--s) calc(var(--s)/4.667);
-} */
-
-/* .background:hover {
-  min-height: 100vh;
-  --s: 300px;
-  --c: #555C6D;
-  --_g: #0000 52%, var(--c) 54% 57%, #0000 59%;
-  background:
-    radial-gradient(farthest-side at 133.33% 50%, var(--_g)) 0 calc(var(--s)/2),
-    radial-gradient(farthest-side at 50% -33.33%, var(--_g)) calc(var(--s)/2) 0,
-    radial-gradient(farthest-side at -33.33% 50%, var(--_g)),
-    radial-gradient(farthest-side at 50% 133.33%, var(--_g)),
-    #E09EA4;
-  background-size: calc(var(--s)/4.667) var(--s), var(--s) calc(var(--s)/4.667);
-  background-attachment: fixed;
-} */
 
 .main {
   display: flex;
@@ -106,7 +62,6 @@ p {
   height:50vh;
   width: 5px;
   margin: 1rem 0;
-  filter: blur(1px);
   z-index: 1;
 }
 
@@ -115,15 +70,18 @@ p {
   background-image: url(./images/noise.png);
 }
 
-.noise-red{
+.gradient-line{
   background: #D7585F;
-  background-image: url(./images/noise.png);
+  background-image: linear-gradient(45deg, #D7585F, #E5B446);
+  background-size: 100%;
+  background-repeat: repeat;
 }
 
-.ground {
+/* .ground {
   width: 100%;
   bottom: 100px;
   mix-blend-mode: multiply;
+  transform: translate3d(0,0,0);
 }
 
 .ground-shadow {
@@ -134,4 +92,16 @@ p {
   background: radial-gradient(#800000, transparent), url('./images/shadow_noise.svg');
   background-size: cover;
   filter: contrast(150%) brightness(700%);
+} */
+
+.gradient-text, .title {
+  background-color: #E5B446;
+  background-image: linear-gradient(45deg, #E5B446, #D7585F);
+  background-size: 100%;
+  background-repeat: repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }

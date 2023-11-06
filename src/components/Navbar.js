@@ -4,12 +4,12 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
 	return (
 		<nav id="menu" className="container lg:px-0 px-5 py-2 lg:py-0 lg:w-3/4 w-full mx-auto flex flex-col lg:flex-row justify-between h-20 items-center font-bold">
-			<h2 className="text-xl lg:text-2xl">
+			<h2 className="title text-xl lg:text-2xl">
         <NavLink
           to="/"
           className="nav-link"
         >
-          Detweiler
+          detweiler
         </NavLink>
       </h2>
 			<div className="lg:block">
@@ -19,7 +19,7 @@ const Navbar = () => {
 							to="/gigs"
 							className="nav-link"
 						>
-							Gigs
+							live
 						</NavLink>
 					</li>
 					<li>
@@ -27,7 +27,7 @@ const Navbar = () => {
 							to="/releases"
 							className="nav-link"
 						>
-							Releases
+							music
 						</NavLink>
 					</li>
           <li>
@@ -35,7 +35,7 @@ const Navbar = () => {
 							to="/news"
 							className="nav-link"
 						>
-							News
+							news
 						</NavLink>
 					</li>
 				</ul>

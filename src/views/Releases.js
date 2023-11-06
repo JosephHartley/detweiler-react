@@ -48,33 +48,38 @@ function Releases() {
   return (
     <>
       <Seo
-        title="Releases | Detweiler"
-        description="All releases by Detweiler"
+        title="Music | Detweiler"
+        description="All music and releases by Detweiler"
       />
       <section className="container w-full lg:px-0 px-5 lg:w-3/4 mx-auto min-h-screen">
-        <h1 className="text-3xl font-bold text-center p-5">Releases</h1>
+        <h1 className="text-2xl font-bold text-center p-5">music</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pb-5">
           {releases &&
             releases.map((release) => (
               <div
-                className=""
                 key={release.title}
               >
                 <div className="flex flex-col items-center">
+                <a href={release.stream} target="_blank" rel="noopener noreferrer">
                   <img
                     src={urlFor(release.image).width(200).url()}
                     alt={release.title}
-                    className="rounded-l object-cover w-40 h-40 border-4 shadow-inner std-border"
+                    className="rounded-lg object-cover w-40 h-40 border-2 shadow-inner border-payeRed"
                   />
+                </a>
+                <a href={release.stream} target="_blank" rel="noopener noreferrer">
                   <h2 className="text-center text-2xl pt-3 text-payeYellow">
                     {release.title}
                   </h2>
+                </a>
                 <p className="text-payeBlue mt-3">
-                  <a href={release.link}>Buy</a> |{" "}
-                  <a href={release.stream}>Stream</a> |{" "}
-                  <button onClick={() => handleInfoClick(release._id)}>
-                    Info
-                  </button>
+                  {release.link && (
+                    <>
+                      <a className="release-link" href={release.link} target="_blank" rel="noopener noreferrer">Buy</a> |{" "}
+                    </>
+                  )}
+                  <a className="release-link" href={release.stream} target="_blank" rel="noopener noreferrer">Listen</a> |{" "}
+                  <button className="release-link" onClick={() => handleInfoClick(release._id)}>Info</button>
                 </p>
                 {expandedRelease === release._id && (
                   <p
