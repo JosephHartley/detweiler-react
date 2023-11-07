@@ -6,7 +6,7 @@ function Home() {
   return (
     <>
       <Seo
-        title="Detweiler"
+        title="Detweiler | Northern ravey rockers"
         description="It's the website for the band Detweiler. Music, tour dates and more. New song PAYE out now"
       />
       <div className="main">
