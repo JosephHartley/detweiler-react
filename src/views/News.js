@@ -1,5 +1,6 @@
 import React from "react";
 import Substack from "../components/Substack";
+import SubstackFeed from "../components/SubstackFeed";
 import { Seo } from "../components/Seo";
 
 function News() {
@@ -14,7 +15,12 @@ function News() {
           news
         </h1>
         <div className="p-5 border-8 border-payeRed rounded-xl">
-          <Substack />
+          <div className="flex flex-col justify-start">
+            <SubstackFeed />
+            <div className="mx-auto">
+              <Substack />
+            </div>
+          </div>
         </div>
       </section>
     </>
