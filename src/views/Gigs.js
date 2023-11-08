@@ -46,7 +46,7 @@ function Gigs() {
             gigs.map((gig) => (
               <div key={gig._id}>
                 <div className="flex p-5 border-t-2 border-payeRed items-center hover:bg-blue-300/10">
-                  <a href={gig.ticketLink} className="basis-9/12 flex flex-col md:flex-row">
+                  <a href={gig.ticketLink} className="basis-9/12 flex flex-col md:flex-row" target="_blank" rel="noopener noreferrer">
                     <div className="basis-1/4">
                       <h3 className="text-payeBlue">
                         {formatDate(new Date(gig.date))}
