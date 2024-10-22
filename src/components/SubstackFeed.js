@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 const SubstackFeed = () => {
   window.SubstackFeedWidget = {
-    substackUrl: "detweiler.substack.com",
+    substackUrl: "detweilertest.substack.com",
     posts: 5,
     hidden: ["author"],
     colors: {
